@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4Yuki</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="img/ruru.png" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div id="baseWrap">
+		<div class="bk"></div>
+		<div id="countdownWrap">
+			<div class="countdown">
+				<div class="countdown-img">
+					<div class="times">
+						<div class="day">あと {{leftday}} 日</div>
+						<div class="second">{{leftHour}}h:{{leftMin}}m:{{leftSec}}s</div>
+					</div>
+				</div>
+			</div>
+			<div id="timeupWrap" style="display: none;">
+				<canvas id="christmasCanvas" style="top: 0px; left: 0px; z-index: -1; position: fixed; pointer-events: none;" ></canvas>
+				<img class="picCelebrate" src="img/timeup.gif">
+			</div>
+			<div class="ycontainer">
+				<div class="main">
+					<div class="peopleWrap">
+						<div class="peoples">
+							<div class="people me"></div>
+							<div class="people you end-pos"></div>
+						</div>
+					</div>
+					<div class="waveContainer">
+						<div class="wave wave-move1"></div>
+						<div class="wave wave-move"></div>
+					</div>
+					<table class="tour">
+						<tr>
+							<td class="text-center" ng-repeat="n in range">
+								<div ng-class="{ 'text-danger': n.isNext }">
+								 &nbsp;
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="text-center" ng-repeat="n in range">
+								<div>
+									{{n.date}}
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div class="markcontain">
+						<div class="tooltiptext start-pos">
+							<span>{{startday}}<br>別れ</span>
+						</div>
+						<div class="tooltiptext me-pos">
+							<span>{{today}}<br>今日</span>
+						</div>
+						<div class="tooltiptext end-pos end-mark">
+							<span>{{endday}}<br>会う</span>
+						</div>
+					</div>
+					<div class="btncontainer">
+						<!-- <button class="btn_again">Replay</button> -->
+					</div>
+				</div>
+
+			</div><!-- ycontainer -->
+		</div><!-- countdownWrap -->
+
+	</div><!-- baseWrap -->
+</body>
+</html>
