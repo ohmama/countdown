@@ -127,7 +127,7 @@ function arrangeDay(){
 	var long = lastTime - beginTime;
 	var offset_num = 1;
 	if (screen.width < 500) {
-		offset_num = 1.4;
+		offset_num = 1.8;
 	}
 	console.log("offset_num "+offset_num);
 	console.log("screen.width "+screen.width);
