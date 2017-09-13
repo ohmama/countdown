@@ -1,8 +1,8 @@
 	var DAY_OF_MILLI_SEC = 86400*1000;
 	// var DAY_END = '2017-07-07 19:15:20';
-	var DAY_END = 'July 7, 2017 19:15:20';
+	var DAY_END = 'Dec 17, 2017 19:15:20';
 	// var DAY_END = 'Jun 29, 2017 02:05:50';
-	var DAY_START = '2017-02-17';
+	var DAY_START = '2017-06-17';
 
 	var lastDate = new Date(DAY_END);
 	var firstDate = new Date(DAY_START);
